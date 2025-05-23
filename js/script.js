@@ -57,7 +57,7 @@ navLinks.forEach(link => {
         const targetSection = document.getElementById(targetId);
         if (targetSection) {
             window.scrollTo({
-                top: targetSection.offsetTop - 50,
+                top: targetSection.offsetTop - 30,
                 behavior: 'smooth'
             });
         }
