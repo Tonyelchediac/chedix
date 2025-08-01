@@ -23,6 +23,12 @@
             overflow-x: hidden;
         }
 
+        p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+
         /* Particle Background */
         #particles-js {
             position: fixed;
@@ -122,7 +128,7 @@
             color: transparent;
         }
 
-        p {
+        .hero p {
             font-size: 1rem;
             margin-bottom: 2rem;
             opacity: 0.9;
