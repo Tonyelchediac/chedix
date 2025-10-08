@@ -44,7 +44,7 @@ form.addEventListener('submit', function(e) {
 
 function whatsappText(){
     const phoneNumber = "96171096971";
-    const message = "Hello, I'm contacting you from Chedix.LB website.";
+    const message = "Hello, I'm contacting you from ChediX website.";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
 }
