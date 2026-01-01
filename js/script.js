@@ -41,7 +41,7 @@ const complexityLabels = ["Simple", "Medium", "Complex"];
 const complexityMultipliers = [0.7, 1.0, 1.5];
 
 const hourlyRates = {
-  frontend: 50,
+  frontend: 45,
   backend: 75,
   uiux: 50,
   qa: 65,
