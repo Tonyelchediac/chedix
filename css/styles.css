@@ -224,13 +224,15 @@ header {
 /* Hero Section */
 .hero {
   height: 100dvh;
-  padding: 160px 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   overflow: hidden;
 }
 
 .hero-content {
-  max-width: 650px;
+  width: 100%;
   position: relative;
   z-index: 1;
 }
@@ -255,7 +257,6 @@ header {
   font-size: 1.25rem;
   color: var(--gray);
   margin-bottom: 40px;
-  max-width: 600px;
 }
 
 .hero-btns {
