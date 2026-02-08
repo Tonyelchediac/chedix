@@ -1,7 +1,7 @@
 {
-  "CodeNumber": 0,
-  "Message": "New Update Available! V2.0 is now live.",
-  "Link": "https://example.com/download",
-  "ConfirmText": "Install",
+  "CodeNumber": 1,
+  "Message": "We apologize for the errors inside the App! \nA new update will be add soon",
+  "Link": "",
+  "ConfirmText": "ok",
   "CancelText": "Cancel"
 }
