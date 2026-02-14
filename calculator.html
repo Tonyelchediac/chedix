@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chedix | Software Solutions</title>
+    <link rel="shortcut icon" href="images/chedix logo removebg.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <img src="images/chedix logo removebg.png" alt="logo">
+                    <span>CHEDIX</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Calculator Section -->
+    <section class="section calculator" id="calculator" style="margin-top: 50px;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Project Cost Calculator</h2>
+                <p>Estimate your software project costs with our transparent pricing calculator. Adjust parameters to match your requirements.</p>
+            </div>
+            <div class="calculator-wrapper">
+                <div class="calculator-grid">
+                    <div class="pricing-cards">
+                        <div class="pricing-card">
+                            <h3><i class="fas fa-desktop"></i> Frontend Development</h3>
+                            <p>UI implementation, responsive design, client-side logic</p>
+                            <div class="price">$40-90<span>/hour</span></div>
+                            <p class="price-note">Typically ~25% of total project cost</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3><i class="fas fa-server"></i> Backend Development</h3>
+                            <p>Server, database, APIs, business logic, security</p>
+                            <div class="price">$50-100<span>/hour</span></div>
+                            <p class="price-note">Typically ~35% of total project cost</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3><i class="fas fa-palette"></i> UI/UX Design</h3>
+                            <p>User research, wireframes, prototypes, visual design</p>
+                            <div class="price">$40-120<span>/hour</span></div>
+                            <p class="price-note">Typically ~10% of total project cost</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3><i class="fas fa-code-branch"></i> Code Correction</h3>
+                            <p>Bug fixing, optimization, refactoring, security audit</p>
+                            <div class="price">$40-80<span>/hour</span></div>
+                            <p class="price-note">Typically ~5% of total project cost</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3><i class="fas fa-check-circle"></i> Quality Assurance</h3>
+                            <p>Testing, debugging, performance optimization, quality control</p>
+                            <div class="price">$50-90<span>/hour</span></div>
+                            <p class="price-note">Typically ~15% of total project cost</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3><i class="fas fa-tools"></i> Maintenance</h3>
+                            <p>Ongoing support, updates, monitoring, technical assistance</p>
+                            <div class="price">$40-80<span>/hour</span></div>
+                            <p class="price-note">Typically ~10% of total project cost (yearly)</p>
+                        </div>
+                    </div>
+                    <div class="calculator-inputs">
+                        <div class="input-group">
+                            <div class="input-label">
+                                <label for="complexity">Project Complexity</label>
+                                <span class="value-display" id="complexityValue">Medium</span>
+                            </div>
+                            <input type="range" id="complexity" min="1" max="3" value="2" step="1">
+                            <div
+                                style="display: flex; justify-content: space-between; color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-top: 8px;">
+                                <span>Simple</span>
+                                <span>Medium</span>
+                                <span>Complex</span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-label">
+                                <label for="hours">Estimated Development Hours</label>
+                                <span class="value-display" id="hoursValue">400 hours</span>
+                            </div>
+                            <input type="range" id="hours" min="100" max="1000" value="400" step="50">
+                            <div
+                                style="display: flex; justify-content: space-between; color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-top: 8px;">
+                                <span>100h</span>
+                                <span>550h</span>
+                                <span>1000h</span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-label">
+                                <label>Required Services</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="frontend" checked>
+                                    <label for="frontend">Frontend Development</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="backend" checked>
+                                    <label for="backend">Backend Development</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="uiux" checked>
+                                    <label for="uiux">UI/UX Design</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="qa">
+                                    <label for="qa">Quality Assurance</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="maintenance">
+                                    <label for="maintenance">Maintenance</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="correction">
+                                    <label for="correction">Code Correction</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn cta-btn" id="calculateBtn" style="margin-top: 20px;">
+                            <i class="fas fa-calculator"></i> Calculate Project Cost
+                        </button>
+                        <div class="results" id="results" style="display: none;">
+                            <h3 style="color: white; margin-bottom: 20px;">Cost Breakdown</h3>
+                            <div id="costBreakdown"></div>
+                            <div class="total-cost">
+                                <div class="total-label">Estimated Total Project Cost</div>
+                                <div class="total-value" id="totalCost">$0</div>
+                            </div>
+                            <p
+                                style="color: rgba(255,255,255,0.8); font-size: 0.9rem; text-align: center; margin-top: 20px;">
+                                * This is an estimate based on standard rates. For a detailed quote, contact our team.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Chedix</h3>
+                    <p>Transforming businesses through innovative software engineering solutions since 2021.</p>
+                    <div class="social-links">
+                        <!-- <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a> -->
+                        <a href="https://instagram.com/chedix.lb"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <a href="#">Web Development</a>
+                    <a href="#">Mobile Apps</a>
+                    <a href="#">UI/UX Design</a>
+                    <a href="#">Software Consulting</a>
+                    <a href="#">DevOps Solutions</a>
+                </div>
+                <!-- <div class="footer-column">
+                    <h3>Company</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Contact</a>
+                </div> -->
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 1505 Str, 256 Bld, Bellani Batroun, NL. LB.</p>
+                    <p><i class="fas fa-phone"></i> +961 71 09 69 71</p>
+                    <p><i class="fas fa-envelope"></i> chedix.lb@gmail.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM GMT</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Chedix Software Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.6"></script>
+    <script src="js/calculator.js"></script>
+</body>
+
+</html>
