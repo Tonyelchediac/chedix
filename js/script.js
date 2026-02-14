@@ -162,3 +162,24 @@ const typed = new Typed(".typing", {
   backSpeed: 50,
   loop: true,
 });
+
+
+// phone section code
+let currentIndex = 0;
+const slider = document.getElementById('imageSlider');
+const totalImages = document.querySelectorAll('.slider img').length;
+
+function moveSlider(direction) {
+    currentIndex += direction;
+
+    // Loop back to start or end
+    if (currentIndex >= totalImages) {
+        currentIndex = 0;
+    } else if (currentIndex < 0) {
+        currentIndex = totalImages - 1;
+    }
+
+    // Move the slider by 100% of the width per image
+    const offset = currentIndex * -100;
+    slider.style.transform = `translateX(${offset}%)`;
+}
